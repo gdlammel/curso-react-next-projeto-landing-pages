@@ -11,7 +11,7 @@ describe("<Heading />", () => {
 		const heading = getByRole("heading", { name: "Text" });
 		expect(heading).toHaveStyleRule("color", theme.colors.primaryColor);
 		expect(heading).toHaveStyleRule("font-size", theme.font.sizes.xhuge);
-		expect(heading).toHaveStyleRule("text-transform", "uppercase");
+		expect(heading).toHaveStyleRule("text-transform", "none");
 	});
 
 	it("should render with white color", () => {
@@ -55,8 +55,7 @@ describe("<Heading />", () => {
 	});
 
 	it("should match snapshot", () => {
-		const { getByRole } = renderTheme(<Heading>Text</Heading>);
-		const heading = getByRole("heading");
-		expect(heading).toMatchSnapshot();
+		const { container } = renderTheme(<Heading>Text</Heading>);
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });
