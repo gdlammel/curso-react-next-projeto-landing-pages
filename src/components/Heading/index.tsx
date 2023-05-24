@@ -17,7 +17,7 @@ export function Heading({
 	colordark = true,
 	as = "h1",
 	size = "huge",
-	uppercase = true,
+	uppercase = false,
 }: Props) {
 	return (
 		<Styled.Title
