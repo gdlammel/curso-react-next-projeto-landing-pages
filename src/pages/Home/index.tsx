@@ -1,4 +1,5 @@
 import { Heading } from "../../components/Heading";
+import { Text } from "../../components/Text";
 import * as Styled from "./styles";
 
 export function Home() {
@@ -7,7 +8,7 @@ export function Home() {
 			<Heading size={"huge"} uppercase={false}>
 				Heading
 			</Heading>
-			<p>Home</p>
+			<Text>Home</Text>
 		</Styled.Container>
 	);
 }
