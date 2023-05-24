@@ -25,5 +25,15 @@ declare module "styled-components" {
 		media: {
 			lteMedium: string;
 		};
+		spacings: {
+			xsmall: string;
+			small: string;
+			medium: string;
+			large: string;
+			xlarge: string;
+			xxlarge: string;
+			huge: string;
+			xhuge: string;
+		};
 	}
 }
