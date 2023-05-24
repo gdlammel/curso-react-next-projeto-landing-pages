@@ -2,13 +2,13 @@ import { ReactNode } from "react";
 
 import * as Styled from "./styles";
 
-type Props = {
+export type MenuLinkProps = {
 	children: ReactNode;
 	link: string;
 	newTab?: boolean;
 };
 
-export function MenuLink({ children, link, newTab = false }: Props) {
+export function MenuLink({ children, link, newTab = false }: MenuLinkProps) {
 	const target = newTab ? "_blank" : "_self";
 
 	return (
