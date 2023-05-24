@@ -11,8 +11,7 @@ describe("<Text />", () => {
 	});
 
 	it("should match snapshot", () => {
-		const { getByText } = renderTheme(<Text>Text</Text>);
-		const text = getByText("Text");
-		expect(text).toMatchSnapshot();
+		const { container } = renderTheme(<Text>Text</Text>);
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });

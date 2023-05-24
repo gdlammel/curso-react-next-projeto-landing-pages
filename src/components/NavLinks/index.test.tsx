@@ -20,8 +20,7 @@ describe("<NavLinks/>", () => {
 	});
 
 	it("should match snapshot", () => {
-		const { getByRole } = renderTheme(<NavLinks links={mock} />);
-		const nav = getByRole("navigation");
-		expect(nav).toMatchSnapshot();
+		const { container } = renderTheme(<NavLinks links={mock} />);
+		expect(container.firstChild).toMatchSnapshot();
 	});
 });
