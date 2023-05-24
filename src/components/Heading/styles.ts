@@ -20,7 +20,7 @@ const titleSize = {
 	huge: (theme: DefaultTheme) => css`
 		font-size: ${theme.font.sizes.xhuge};
 		@media ${theme.media.lteMedium} {
-			font-size: ${({ theme }) => theme.font.sizes.xlarge};
+			font-size: ${theme.font.sizes.xlarge};
 		}
 	`,
 };
