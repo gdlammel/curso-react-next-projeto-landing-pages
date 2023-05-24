@@ -1,4 +1,3 @@
-import "jest-styled-components";
 import { describe, it } from "vitest";
 
 import { renderTheme } from "../../utils/renderTheme";
