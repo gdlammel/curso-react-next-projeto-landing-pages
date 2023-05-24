@@ -13,16 +13,6 @@ describe("<Text />", () => {
 	it("should match snapshot", () => {
 		const { getByText } = renderTheme(<Text>Text</Text>);
 		const text = getByText("Text");
-		expect(text).toMatchInlineSnapshot(`
-			.c0 {
-			  font-size: 2.4rem;
-			}
-
-			<p
-			  class="c0"
-			>
-			  Text
-			</p>
-		`);
+		expect(text).toMatchSnapshot();
 	});
 });
