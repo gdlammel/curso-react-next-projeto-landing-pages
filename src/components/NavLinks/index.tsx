@@ -1,13 +1,13 @@
 import { MenuLink, MenuLinkProps } from "../MenuLink";
 import * as Styled from "./styles";
 
-type Props = {
+export type NavLinksProps = {
 	links?: MenuLinkProps[];
 };
 
-export function NavLinks({ links = [] }: Props) {
+export function NavLinks({ links = [] }: NavLinksProps) {
 	return (
-		<Styled.Container>
+		<Styled.Container aria-label="Main menu">
 			{links.map((link) => (
 				<MenuLink key={link.link} {...link}>
 					{link.children}
