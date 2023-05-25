@@ -3,6 +3,7 @@ import { LogoLink } from "../../components/LogoLink";
 import { MenuLink } from "../../components/MenuLink";
 import { NavLinks } from "../../components/NavLinks";
 import { mock } from "../../components/NavLinks/mock";
+import { SectionBackground } from "../../components/SectionBackground";
 import { Text } from "../../components/Text";
 import * as Styled from "./styles";
 
@@ -18,6 +19,7 @@ export function Home() {
 			</MenuLink>
 			<NavLinks links={mock} />
 			<LogoLink link="" text="LogoLink" srcImg="assets/images/logo.svg" />
+			<SectionBackground>Teste do componente</SectionBackground>
 		</Styled.Container>
 	);
 }
