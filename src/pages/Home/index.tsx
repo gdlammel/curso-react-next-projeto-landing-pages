@@ -1,25 +1,18 @@
-import { Heading } from "../../components/Heading";
-import { LogoLink } from "../../components/LogoLink";
-import { MenuLink } from "../../components/MenuLink";
-import { NavLinks } from "../../components/NavLinks";
-import { mock } from "../../components/NavLinks/mock";
-import { SectionBackground } from "../../components/SectionBackground";
-import { Text } from "../../components/Text";
+import { Menu } from "../../components/Menu";
+import { navLinksMock } from "../../components/NavLinks/mock";
 import * as Styled from "./styles";
+
+const logoDataMock = {
+	link: "#target",
+	text: "Logo",
+	srcImg: "",
+};
 
 export function Home() {
 	return (
 		<Styled.Container>
-			<Heading size={"huge"} uppercase>
-				Heading
-			</Heading>
-			<Text>Home</Text>
-			<MenuLink link="https://github.com" newTab>
-				Link
-			</MenuLink>
-			<NavLinks links={mock} />
-			<LogoLink link="" text="LogoLink" srcImg="assets/images/logo.svg" />
-			<SectionBackground>Teste do componente</SectionBackground>
+			<h1>Home</h1>
+			<Menu logoData={logoDataMock} links={navLinksMock} />
 		</Styled.Container>
 	);
 }
