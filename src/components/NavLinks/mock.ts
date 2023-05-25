@@ -1,4 +1,4 @@
-export const mock = [
+export const navLinksMock = [
 	{
 		children: "Link 1",
 		link: "#target1",
