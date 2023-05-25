@@ -2,7 +2,7 @@ import { describe, it } from "vitest";
 
 import { renderTheme } from "../../utils/renderTheme";
 import { NavLinks } from ".";
-import { mock } from "./mock";
+import { navLinksMock } from "./mock";
 
 describe("<NavLinks/>", () => {
 	it("should render a nav", () => {
@@ -14,13 +14,13 @@ describe("<NavLinks/>", () => {
 	});
 
 	it("should has 10 MenuLink", () => {
-		const { getAllByRole } = renderTheme(<NavLinks links={mock} />);
+		const { getAllByRole } = renderTheme(<NavLinks links={navLinksMock} />);
 		const links = getAllByRole("link");
-		expect(links).toHaveLength(mock.length);
+		expect(links).toHaveLength(navLinksMock.length);
 	});
 
 	it("should match snapshot", () => {
-		const { container } = renderTheme(<NavLinks links={mock} />);
+		const { container } = renderTheme(<NavLinks links={navLinksMock} />);
 		expect(container.firstChild).toMatchSnapshot();
 	});
 });
