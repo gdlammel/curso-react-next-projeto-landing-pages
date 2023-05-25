@@ -5,6 +5,7 @@ declare module "styled-components" {
 		colors: {
 			primaryColor: string;
 			secondaryColor: string;
+			mediumGray: string;
 		};
 		font: {
 			family: {
