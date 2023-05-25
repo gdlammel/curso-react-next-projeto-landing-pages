@@ -1,13 +1,13 @@
 import { Heading } from "../Heading";
 import * as Styled from "./styles";
 
-type Props = {
+export type LogoLinkProps = {
 	text: string;
 	srcImg?: string;
 	link: string;
 };
 
-export function LogoLink({ text, srcImg = "", link }: Props) {
+export function LogoLink({ text, srcImg = "", link }: LogoLinkProps) {
 	return (
 		<Heading size="small" uppercase>
 			<Styled.Container href={link}>
