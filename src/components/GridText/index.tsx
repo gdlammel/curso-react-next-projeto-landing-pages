@@ -22,14 +22,18 @@ export function GridText({
 	return (
 		<SectionBackground background={background}>
 			<Styled.Container>
-				<Heading size="huge" uppercase colordark={!background}>
+				<Heading size="huge" uppercase colordark={!background} as="h2">
 					{title}
 				</Heading>
 				<Text>{description}</Text>
 				<Styled.Grid>
 					{grid.map((element) => (
 						<Styled.GridElement key={element.title}>
-							<Heading size="medium" colordark={!background}>
+							<Heading
+								size="medium"
+								colordark={!background}
+								as="h3"
+							>
 								{element.title}
 							</Heading>
 							<Text>{element.description}</Text>
