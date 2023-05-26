@@ -1,11 +1,9 @@
-import { ReactNode } from "react";
-
 import * as Styled from "./styles";
 
 type Props = {
-	children: ReactNode;
+	children: string;
 };
 
 export function Text({ children }: Props) {
-	return <Styled.Container>{children}</Styled.Container>;
+	return <Styled.Container dangerouslySetInnerHTML={{ __html: children }} />;
 }
