@@ -20,7 +20,6 @@ export const Container = styled.div<Props>`
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
 	border-bottom: ${({ theme }) => theme.colors.mediumGray};
 	background: #fff;
 	transition: all 300ms ease-in-out;
