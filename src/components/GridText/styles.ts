@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { css, styled } from "styled-components";
 import { Title as Heading } from "../Heading/styles";
 import { Container as Text } from "../Text/styles";
 
@@ -13,6 +13,14 @@ export const Grid = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 	gap: ${({ theme }) => theme.spacings.large};
+	overflow: hidden;
+	width: 100%;
+
+	${({ theme }) => css`
+		@media ${theme.media.lteMedium} {
+			grid-template-columns: 1fr;
+		}
+	`}
 `;
 
 export const GridElement = styled.div`
