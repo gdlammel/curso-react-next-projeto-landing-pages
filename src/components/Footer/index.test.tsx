@@ -6,7 +6,7 @@ describe("<Footer/>", () => {
 	it("should render the component on screen", () => {
 		const { container } = renderTheme(
 			<Footer
-				html={`<p><a href="https://beacons.page/otaviomiranda">Feito com ❤ por Otávio Miranda</a></p>`}
+				footerHtml={`<p><a href="https://beacons.page/otaviomiranda">Feito com ❤ por Otávio Miranda</a></p>`}
 			/>
 		);
 		expect(container.firstChild).toBeInTheDocument();
@@ -15,7 +15,7 @@ describe("<Footer/>", () => {
 	it("should match snapshot", () => {
 		const { container } = renderTheme(
 			<Footer
-				html={`<p><a href="https://beacons.page/otaviomiranda">Feito com ❤ por Otávio Miranda</a></p>`}
+				footerHtml={`<p><a href="https://beacons.page/otaviomiranda">Feito com ❤ por Otávio Miranda</a></p>`}
 			/>
 		);
 		expect(container.firstChild).toMatchSnapshot();

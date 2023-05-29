@@ -3,14 +3,14 @@ import { Text } from "../Text";
 import { SectionContainer } from "../SectionContainer";
 
 type Props = {
-	html: string;
+	footerHtml: string;
 };
 
-export function Footer({ html }: Props) {
+export function Footer({ footerHtml }: Props) {
 	return (
 		<Styled.Container>
 			<SectionContainer>
-				<Text>{html}</Text>
+				<Text>{footerHtml}</Text>
 			</SectionContainer>
 		</Styled.Container>
 	);
