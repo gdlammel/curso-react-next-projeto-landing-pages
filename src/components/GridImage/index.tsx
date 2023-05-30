@@ -6,6 +6,7 @@ type Props = {
 	background?: boolean;
 	title: string;
 	description: string;
+	sectionId?: string;
 	grid: {
 		altText: string;
 		srcImg: string;
@@ -15,10 +16,11 @@ export function GridImage({
 	background = false,
 	title,
 	description,
+	sectionId = "",
 	grid,
 }: Props) {
 	return (
-		<SectionBackground background={background}>
+		<SectionBackground background={background} sectionId={sectionId}>
 			<Styled.Container>
 				<Heading size="huge" uppercase colordark={!background} as="h2">
 					{title}

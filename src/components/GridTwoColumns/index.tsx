@@ -8,6 +8,7 @@ type Props = {
 	text: string;
 	srcImg: string;
 	background?: boolean;
+	sectionId?: string;
 };
 
 export function GridTwoColumns({
@@ -15,9 +16,10 @@ export function GridTwoColumns({
 	text,
 	srcImg,
 	background = false,
+	sectionId = "",
 }: Props) {
 	return (
-		<SectionBackground background={background}>
+		<SectionBackground background={background} sectionId={sectionId}>
 			<Styled.Container>
 				<Styled.TextContainer>
 					<Heading uppercase colordark={!background} as="h2">

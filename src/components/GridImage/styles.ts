@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import { styled, css } from "styled-components";
 import { Container as Text } from "../Text/styles";
 
 export const Container = styled.div`
@@ -11,6 +11,11 @@ export const Grid = styled.div`
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 	gap: ${({ theme }) => theme.spacings.large};
+	${({ theme }) => css`
+		@media ${theme.media.lteMedium} {
+			grid-template-columns: 1fr;
+		}
+	`}
 `;
 
 export const GridElement = styled.div`

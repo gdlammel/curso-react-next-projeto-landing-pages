@@ -21,7 +21,7 @@ export function Layout({ children, links = [], logoData, footerHtml }: Props) {
 			<Menu links={links} logoData={logoData} />
 			<Styled.Container>
 				{children}
-				<Footer html={footerHtml} />
+				<Footer footerHtml={footerHtml} />
 			</Styled.Container>
 			<GoTop />
 		</>
